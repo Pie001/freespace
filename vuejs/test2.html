@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <!-- https://kr.vuejs.org/v2/guide/list.html -->
+    <!-- 리스트 렌더링 -->
+    <!-- v-for로 엘리먼트에 배열 매핑하기 -->
+    <ul id="example-1">
+      <li v-for="item in items">
+        {{ item.message }}
+      </li>
+    </ul>
+
+    <ul id="example-2">
+      <li v-for="(item, index) in items">
+        {{ parentMessage }} - {{ index }} - {{ item.message }}
+      </li>
+    </ul>
+
+    <!-- v-for와 객체 -->
+    <ul id="v-for-object" class="demo">
+      <li v-for="value in object">
+        {{ value }}
+      </li>
+      <!-- 전달 인자 포함 -->
+      <div v-for="(value, key) in object">
+        {{ key }}: {{ value }}
+      </div>
+      <!-- 인덱스 포함 -->
+      <div v-for="(value, key, index) in object">
+        {{ index }}. {{ key }} : {{ value }}
+      </div>
+    </ul>
+
+
+
+    <script src="test2.js"></script>
+  </body>
+</html>
